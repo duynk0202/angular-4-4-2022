@@ -1,0 +1,52 @@
+$primary: #fa4c53;
+@mixin flexbox($align: flex-start, $justify: flex-start, $flex-derection: row, $wrap: nowrap) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $flex-derection;
+    flex-wrap: $wrap;
+}
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+.input_register{
+    height: 50px;
+    width: 100%;
+    border: .5px;
+    border-radius: 10px;
+    background: #fffbfb;
+}
+.signup{
+    width: 40%;
+    height: 60%;
+    margin-top: 100px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgb(black, 0.1);
+
+}
+
+.input_style {
+    color: #2c0909;
+    transition: all 0.2s linear;
+    &::-webkit-input-placeholder {
+        color: black;
+    }
+    &:focus {
+        border-color: rgb(12, 74, 78);
+        box-shadow: 0 0 0 2px #23d3bb;
+    }
+}
+.alert-danger {
+    border-radius: 10px;;
+    font-size: 12px;
+    width: calc(100% - 50px);
+    margin-top: 5px;
+}
+.text-register{
+    color: rgb(255, 255, 255);
+}
+.bg-background{
+    background: url("../../../../../assets/images/flower.jpg");
+}

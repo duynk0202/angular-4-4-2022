@@ -1,0 +1,26 @@
+
+<div class="card border-priamry bg-color">
+    <div class="card-body" >
+        <button class="text-color">{{title}}</button>
+       
+        <app-form2 *ngIf="isShowUser"  (addUser)="onUser($event)" [sua] ="users"></app-form2>
+         <input type="hidden"  *ngIf="isShowUser == false"  class="btn btn-success" (click)="doThemMoi()">
+        <hr>
+       <app-list2  [saveUser]="listUser" (sua)="updateUser($event)"></app-list2>
+    </div>
+</div>
+  <!-- <nav aria-label="Page navigation example  ">
+    <ul class="pagination pagination-sm db-flex jutify-content-center">
+      <li class="page-item">
+        <a class="page-link" (click)="prevPage()">
+          <span aria-hidden="true">Trang trước</span>
+        </a>
+      </li>
+      <li class="page-item" [ngClass]="{disabled:currentPage==totalPage}">
+        <a class="page-link" (click)="nextPage()">
+          <span aria-hidden="true">Trang sau</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+   -->

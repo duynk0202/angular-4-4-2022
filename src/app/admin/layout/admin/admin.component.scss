@@ -1,0 +1,48 @@
+#sidebarMenu{
+    height: 700px;
+    background-color: rgba(0, 45, 255, 0.5); 
+color: rgba(11, 59, 179, 0.5);
+    ul{
+        padding: 0px;
+        margin: 0px;
+        li{
+            margin: 10px;
+            a{
+                color: adjust-hue($color: #3d3a3a, $degrees: 0);
+                font-weight: 600;
+               font-size: 18px;
+               
+                margin: 0px;
+                &:hover{
+                    background:linear-gradient(rgb(9, 96, 146), rgb(0, 255, 85));
+                    color: rgb(248, 240, 240);
+                }
+                &:active{
+                    background: rgb(1, 2, 2);
+                    border-left: 3px solid #17d8be;
+                }
+            }
+        }
+    }
+}
+
+main{
+   
+    background: rgb(255, 255, 255);
+}
+.nav-link{
+    color: rgb(155, 153, 153);
+    font-weight: 400;
+   
+}
+
+.card{
+    box-shadow: 1px 1px 13px 1px rgb(122, 213, 216);
+}
+.text-color{
+    color: linear-gradient(180deg, #533938 0%, #cc305f 100%);
+    font-size: 40px;
+}
+.bg-image{
+    background: url("../../../../assets/images/flower.jpg");
+}

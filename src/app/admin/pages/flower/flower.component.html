@@ -1,0 +1,13 @@
+    
+<div class="card border-priamry">
+    
+    <div class="card-body bg-color" >
+      
+        <button class="text-color">Quản lý bán hoa</button>
+         <br>
+        <app-form *ngIf="isShowHoa"  (themhoa)="showHoa($event)" [sua] ="flowers"></app-form>
+         <button  *ngIf="isShowHoa == false"   class="btn btn-warning " (click)="doThemMoi()">+ Thêm mới </button>
+        
+       <app-list  [hoa]="listFlower" (sua)="editHoa($event)"></app-list>
+    </div>
+</div>

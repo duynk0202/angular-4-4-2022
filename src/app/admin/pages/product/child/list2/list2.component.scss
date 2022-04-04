@@ -1,0 +1,28 @@
+.tb-text{
+    padding: 20px !important;
+    margin-left: 40px;
+}
+.search_btn{
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    justify-content: flex-end;
+}
+.search_icon{
+    width: 150px;
+   
+}
+.btn-color{
+    background:linear-gradient(rgb(9, 96, 146), rgb(0, 255, 85));
+  
+    &:hover{
+        background: red;
+
+    }
+}
+.btn-update{
+    background:linear-gradient(rgb(9, 96, 146), rgb(0, 255, 85));
+    &:hover{
+        background: red;
+    }
+}

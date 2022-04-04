@@ -1,0 +1,29 @@
+<div class="signin container mb-5 bg-background">
+    <div >
+        <h1 class=" text-center">Đăng nhập</h1>
+        <form class="signin-form" #formLogin="ngForm" (submit)="onSubmit(formLogin)">
+            <div class="">
+                <label for="email" ><h6>Email</h6></label>
+                <input #email="ngModel" required type="email" id="email" name="email" [(ngModel)]="users.email"  class="input_login input_style" placeholder="Nhập email">
+
+                <div class="alert alert-danger" *ngIf="email.invalid &&(email.dirty||email.touched)" >  
+                    <strong *ngIf="formLogin.submitted||email.touched || email.dirty && email.errors?.['required']">Please enter your email</strong>
+                </div>
+            </div>
+            <div class=>
+                <label for="pass"><h6>Mật khẩu</h6></label>
+                <input type="password" id="pass" name="password" [(ngModel)]="users.password" #pass="ngModel" required  class="input_login input_style" placeholder="Nhập mật khẩu">
+                <div class="alert alert-danger" *ngIf="pass.invalid &&(pass.dirty||
+                pass.touched)" >  
+                    <strong *ngIf="formLogin.submitted||pass.touched || pass.dirty && pass.errors?.['required']">Please enter your email</strong>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <button class="btn btn-primary btn-text" type="submit" >
+                    <h5 class="text-login">Đăng nhập</h5>
+                </button>
+            </div>
+            <p class="text-login-p text-warning text-decoration-none">Bạn chưa có tài khoản?<a [routerLink]="['/register']" class="ms-2 h6 text-decoration-none">Sign Up</a></p>
+        </form>
+    </div>
+</div>

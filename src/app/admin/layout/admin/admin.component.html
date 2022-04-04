@@ -1,0 +1,38 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="row">
+      
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+        <div class="position-sticky ">
+          <h4 class="text-center text-color">UDBH</h4>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+             
+              <a class="nav-link " [routerLink]="['/admin/home']">
+                <i class="fas fa-home"></i> Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " [routerLink]="['/admin/flower']">
+                <i class="fas fa-baby-carriage"></i> Quản lý hoa
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  [routerLink]="['/admin/qladmin']">
+                <i class="fab fa-fort-awesome-alt"></i> Quản lý nhân viên
+              </a>
+            </li>
+            
+            
+            
+          </ul>
+        </div>
+      </nav>
+  
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-2 bg-image" >
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+  </div>
+
+<app-footer></app-footer>

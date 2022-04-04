@@ -1,0 +1,53 @@
+nav{
+    background-color: aqua;
+
+    ul{
+        display: flex;
+        margin: 0;
+
+        li{
+            list-style: none;
+            margin: 20px 20px;
+            border-right: 1px solid;
+            a{
+                text-decoration: none;
+                text-transform: uppercase;
+                padding: 10px;
+                margin-bottom: 10px;
+                &:hover{
+                    color: red;
+                    background-color: salmon;
+                }
+            }
+        }
+    }
+}
+.btn{
+    margin-left: 20px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    &.btn-primary{
+        background-color: rgb(8, 93, 204);
+        border: black solid 1px;
+        border-radius: 5px;
+    }
+    &.btn-success{
+        background-color: rgb(22, 230, 161);
+        border: black solid 1px;
+        border-radius: 5px;
+    }
+    &.btn-danger{
+        background-color: rgb(230, 36, 22);
+        border: black solid 1px;
+        border-radius: 5px;
+    }
+}
+.form-control{
+    padding: 10px; 
+    width: 300px;
+}
+.bg-coler{
+    padding: 30px 0px;
+    background-color: rgb(117, 109, 65);
+}

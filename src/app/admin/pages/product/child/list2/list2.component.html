@@ -1,0 +1,43 @@
+
+
+<div class="box">
+    <div class="search_btn">
+            <input class="form-control me-2 search_icon" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="searchText">
+            <button class="btn btn-outline-success" type="submit">Search</button>      
+    </div>
+</div>
+<table class="table table-striped table-inverse table-bordered">
+    <thead class="thead-inverse text-center">
+        <tr>
+            <th scope="col">Số thứ tự</th>
+            <th scope="col">Tên nhân viên</th>
+           
+            <th scope="col">Email</th>
+            <th scope="col">Mật khẩu</th>
+            <th scope="col">Ngày đăng kí</th>
+            <th scope="col">Cập nhật</th>
+            <th scope="col">Xóa</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of listUser| filter:searchText ; let i=index" class="tb-text text-center" appHightlight>
+                    
+                    <td>{{i+1}}</td>
+                    
+                    <td>{{item.name}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.password}}</td>
+                    
+                    <td>{{item.created_at | date:'MMM d, y, h:mm:ss a'}}
+                       
+                     
+                    </td>
+                    <td>
+    
+                        <button class="btn btn-update" (click)="editUser(i)">Cập nhật</button>
+                    </td>
+                      
+                    <td>   <button class="btn btn-color" (click)="deleteUser(i)">Xóa</button></td>
+                </tr>
+        </tbody>
+</table>
